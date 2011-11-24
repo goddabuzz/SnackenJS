@@ -1,0 +1,13 @@
+{
+	"name": "snackenjs",
+	"description": "SnackenJS Application",
+	"author": "D. Kloosterman <buz.i286@gmail.com>",
+	"version": "0.1.0",
+	"contributors": [
+		{ "name" : "D.Kloosterman", "email":"buz.i286@gmail.com" },
+		{ "name" : "D.Bos","email":"d.bos@geotrack.nl"}
+	],
+	"dependencies": {
+		"express": "2.5.0"
+	}
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Snacken</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <!-- StyleSheet -->
+        <link rel="stylesheet" type="text/css" href="css/snacken.css">
+        
+        <!-- external lib -->
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.min.js"></script>
+        
+        <!-- Scripts / Widgets  -->
+        <script type="text/javascript" src="js/events.js"></script>
+        <script type="text/javascript" src="js/Mask.js"></script>
+        <script type="text/javascript" src="js/Dialog.js"></script>
+        
+        <!-- SnackenJS specific scripts-->
+        <script type="text/javascript" src="js/Menu.js"></script>
+        <script type="text/javascript" src="js/OrderList.js"></script>
+        <script type="text/javascript" src="js/Order.js"></script>
+        
+        <script type="text/javascript" src="js/App.js"></script>
+    </head>
+    <body>
+        <!-- Header -->
+        <div class="sn-header">
+            <div>
+                <img src="images/geotrack_logo.png" alt="Geotrack Telematics SnackDay!#@$" />
+                <span>Snackdag</span>
+            </div>
+        </div>
+        
+        <!-- Body wrap -->
+        <div class="sn-body">
+            
+            <!-- Content -->
+            <div class="block left">
+                <h1>Snackbar-IJssalon Hennie Ris</h1>
+                <img class="map" src="http://maps.googleapis.com/maps/api/staticmap?center=52.960546,5.922416&zoom=15&size=100x100&maptype=street&sensor=false" alt="" />
+                <b>Adres:</b> Oude Koemarkt 3, 8441 EV Heerenveen<br />
+                <b>Telefoon:</b> (0513) 628 348<br>
+                <p>
+                    Een snackbar of snelbuffet is een eetgelegenheid waar men voornamelijk 
+                    snacks (friet, kroket, frikandel) kan kopen en nuttigen.
+                </p>
+                
+                <!-- Menu start -->
+                <h1>Menu</h1>
+                
+                <!-- Items available for ordering -->
+                <ul id="list"></ul>
+                
+                <!-- Create a big transparent border -->
+                <div class="sn-transparent"></div>
+            </div>
+            
+            <!-- Menu -->
+            <div class="block right">
+                <h1>Mijn bestelling</h1>
+                <b>Sleep de producten die je wilt bestellen naar deze box</b>
+                
+                <!-- Orders -->
+                <div class="orders" id="dropbox">Voeg toe!</div>
+                
+                <ul id="ordered">
+                    <li><a href="#" class="total">Totaal<span>&euro;0.00</span></a></li>
+                </ul>
+                
+                <button type="button" id="orderBtn">Bestellen!</button>
+                
+                <!-- Create a big transparent border -->
+                <div class="sn-transparent"></div>
+            </div>
+        </div>
+    </body>
+</html>
