@@ -35,9 +35,16 @@ $.extend(Order.prototype, Dialog.prototype, {
     initListeners: function(){
         var self = this;
         var btn = $(this.body).find('button');
-        btn.on('click', function(){
+        
+        btn.on('click', function(e){
             self.onSubmitClick.call(self);
         });
+        
+         $(this.body).find("form").bind("keypress", function(e) {
+             if (e.keyCode == 13) {
+                 return false;
+            }
+         });
     },
     
     onSubmitClick: function(){
