@@ -3,7 +3,7 @@ var express = require('express');
 
 // Includes
 var User = require(__dirname + '/server/User.js');
-var Menu = require(__dirname + '/data/Menu.js');
+var Menu = require(__dirname + '/data/menu.js');
 
 // Initialize appliaction
 var app = express.createServer();
