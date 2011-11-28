@@ -24,6 +24,12 @@ app.get('/list', function(req, res){
     res.send(Menu);
 });
 
+// 
+app.get('/reset', function(req, res){
+    users = {};
+    res.send("Orders are reset");
+});
+
 // Requests
 app.post('/order', function(req, res){
     var result = {
@@ -41,7 +47,7 @@ app.post('/order', function(req, res){
     var user;
     
     // save user details
-    if (!req.session.userId) {
+    if (!req.session.userId && !users[req.session.userId]) {
         user = new User(name);
         var id = user.get('id') || 0;
         users[id] = user;
