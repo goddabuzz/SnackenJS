@@ -20,6 +20,7 @@ OrderView.prototype.loadMenu = function(){
             var item = items[i];
             self.ids[item.id] = item;
         }
+        
         self.loadOrders.call(self);
     });
 };

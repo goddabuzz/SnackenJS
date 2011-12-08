@@ -17,6 +17,21 @@ Menu.prototype.getData = function(location){
             var item = items[i];
             self.ids[item.id] = item;
         }
+        
+        // Sort menu
+        items.sort(function(a, b){
+            var ret = 0;
+            var nameA = a.name.toLowerCase();
+            var nameB = b.name.toLowerCase();
+            if (nameA < nameB) {
+                ret = -1; 
+            }
+            else if (nameA > nameB){
+                ret = 1;
+            }
+            return ret;
+        });
+        
         self.render();
     });
 };
